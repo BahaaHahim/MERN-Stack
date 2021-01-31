@@ -1,28 +1,27 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
-class Props extends Component {
-    constructor(props){
-        super(props);
-            this.state={
-                age : this.props.age,
-            }
+
+const Props = props => {
+    const[count, setCount] = useState(0);
+    
+    const incrementCount = () =>{
+        setCount(baha => baha +1)
     }
-    clickHandelr=()=> {
-        this.setState({
-            age: this.state.age +1
-        });
-    }
-    render() {
-        return (
-            <div>
-                <h1>{this.props.lastname} , {this.props.firstname}</h1>
-                <p>Age: {this.state.age}</p>
-                <p>Hair color : {this.props.haircolor}</p>
-                <button onClick={this.clickHandelr}>Birthday button for {this.props.firstname}{this.props.lastname}</button>
-                
-            </div>
-        )
-    }
+
+
+
+
+return (
+    <div>
+        {/* <h1>{this.props.lastname} , {this.props.firstname}</h1> */}
+        <p>Age: {count}</p>
+        {/* <p>Hair color : {this.props.haircolor}</p> */}
+        <button onClick={incrementCount}>Birthday button</button>
+        
+    </div>
+)
 }
+
+
 
 export default Props
