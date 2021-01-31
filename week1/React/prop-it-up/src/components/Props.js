@@ -8,14 +8,10 @@ const Props = props => {
         setCount(baha => baha +1)
     }
 
-
-
-
 return (
     <div>
-        {/* <h1>{this.props.lastname} , {this.props.firstname}</h1> */}
+        <h1></h1>
         <p>Age: {count}</p>
-        {/* <p>Hair color : {this.props.haircolor}</p> */}
         <button onClick={incrementCount}>Birthday button</button>
         
     </div>
